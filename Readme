@@ -1,0 +1,18 @@
+Steps to get the app running.
+1) In your Google Drive account, create a new folder preferably in the home location to reduce complexities of permissions
+and file paths. e.g call the folder test
+2) Double click the folder to open it.
+3) Take note of the url, the string that comes after folders is the folder ID.
+e.g if the url is https://drive.google.com/drive/folders/123abscdefghIHG, the folder ID is 123abscdefghIHG
+4) Now, you'll need to share the folder with thr service account email to enable the api to be able to upload files into it.
+5) How do you get a service account?
+    a) Visit the Google Cloud Console using this link: https://console.cloud.google.com/apis/library/drive.googleapis.com
+    b) Enable the Google Drive api
+    c) You do not need to add a CREDIT card for this to work at this point, however after subsequent tests Google
+     might ask you to add a payment method to activate your GCP credit of $400.
+    d) Proceed to create a service account
+    e) After creating the service account create a new key and download the json file.
+        This is the file you will need in line 9.
+6) Copy the service account email and go back to the folder you created on google drive and share to that email
+as though you were sharing the folder with any other gmail user.
+7) You can proceed to run your script and you should see the test.txt file uploaded on your Drive
